@@ -1,0 +1,6 @@
+/*.egg-info/
+/.coverage
+/.tox/
+/db.sqlite3
+/htmlcov/
+/venv/
