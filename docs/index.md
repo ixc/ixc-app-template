@@ -11,9 +11,9 @@ TODO
 
 Install the app into your virtualenv:
 
-    (venv)$ pip install -e git@github.com:ixc/{{ app_name }}.git#egg={{ app_name }}
+    (venv)$ pip install -e git+ssh://git@github.com/ixc/<app_name>.git#egg=<app_name>
 
-Update your project settings:
+Update your settings module:
 
     INSTALLED_APPS += ('{{ app_name }}', )
 
