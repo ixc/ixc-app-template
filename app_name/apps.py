@@ -10,7 +10,3 @@ from django.apps import AppConfig
 
 class AppConfig(AppConfig):
     name = '{{ app_name }}'
-    # verbose_name = '{{ app_name }}'
-
-    def ready(self):
-        pass

@@ -1,5 +1,6 @@
-from {{ app_name }} import __version__
 import setuptools
+
+from {{ app_name }} import __version__
 
 setuptools.setup(
     name='{{ app_name }}',
@@ -10,6 +11,7 @@ setuptools.setup(
         'django-dynamic-fixture',
         'django-nose',
         'django-webtest',
+        'mkdocs',
         'nose-progressive',
         'tox',
         'WebTest',

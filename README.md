@@ -10,45 +10,46 @@ This is a bare-bones skeleton app template, for use with the
 You will need `django 1.4+`, `git`, `python 2.7+`, `pip` and `virtualenv`  to
 create a new app with this template.
 
-    # Create environment variables for the app and module name, so we can use
-    # it in the following commands. E.g. `django-foo-bar` and `foo_bar`
+Create environment variables for the app and module name (e.g. `django-foo-bar`
+and `foo_bar`), so we can use them in the following commands:
+
     $ export APP=<app_name>
     $ export MODULE=<module_name>
 
-    # Create app from template.
-    $ mkdir -p ~/Projects/$APP
-    $ django-admin.py startapp -e md -n .coveragerc \
-    --template=https://github.com/ixc/ixc-app-template/archive/master.zip \
-    $MODULE ~/Projects/$APP
+Create an app from the template:
 
-    # Make `manage.py` executable, for convenience.
-    $ cd ~/Projects/$APP
+    $ mkdir $APP
+    $ django-admin.py startapp -e md,yml -n .coveragerc \
+    --template=https://github.com/ixc/ixc-app-template/archive/master.zip \
+    $MODULE $APP
+
+Make the `manage.py` file executable, for convenience:
+
+    $ cd $APP
     $ chmod 755 manage.py
 
-    # Create git repository and push initial commit.
+Create a git repository and push an initial commit:
+
     $ git init
     $ git add -A
     $ git commit -m 'Initial commit.'
     $ git remote add origin git@github.com:ixc/$APP.git
     $ git push
 
-    # Create virtualenv and install requirements.
+Create a virtualenv and install the requirements:
+
     $ virtualenv venv
     $ source venv/bin/activate
     (venv)$ pip install -r requirements.txt
 
-    # Run tests against all environments.
+Run the tests:
+
     (venv)$ tox
 
-Now start work on your app! You might want to start with:
+Now, write your app! You might want to start with:
 
   * Remove the `App Template` section (these instructions) from `README.md`
     (this file).
-  * Update the `requirements.txt` file (e.g. add forked, pre-release and
-    private dependencies that can't go in the `setup.py` file).
-  * Update the `tox.ini` file (e.g. configure environments and add conditional
-    dependencies).
-  * Update the `{{ app_name }}/apps.py` file (e.g. add `verbose_name` and
-    register signal handlers).
-  * Update the `{{ app_name }}/tests/settings.py` file (e.g. configure apps).
-  * Add forms, models, templates, views, and tests!
+  * Update the `docs/index.md` file (e.g. the overview, installation and usage
+    sections).
+  * Read the [contributing](docs/contributing.md) docs.
