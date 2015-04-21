@@ -50,6 +50,7 @@ Now, write your app! You might want to start with:
 
   * Remove the `App Template` section (these instructions) from `README.md`
     (this file).
+  * Add a `LICENSE` file (e.g. [MIT](http://choosealicense.com/licenses/mit/)).
   * Update the `docs/index.md` file (e.g. the overview, installation and usage
     sections).
   * Read the [contributing](docs/contributing.md) docs.
