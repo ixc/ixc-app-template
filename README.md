@@ -49,12 +49,12 @@ Run the tests:
 
 Now, write your app! You might want to start with:
 
-  * Remove the `App Template` section (these instructions) from `README.md`
-    (this file).
   * Add a `LICENSE` file (e.g. [MIT]).
   * Update the `docs/index.md` file (e.g. the overview, installation and usage
     sections).
   * Read the [contributing] docs.
+  * Remove the `App Template` section (these instructions) from `README.md`
+    (this file).
 
 [contributing]: docs/contributing.md
 [GitHub]: https://github.com
