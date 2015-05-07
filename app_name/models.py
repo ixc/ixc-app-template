@@ -10,7 +10,10 @@ from django.utils import timezone
 
 class AbstractBaseModel(models.Model):
     """
-    Abstract base model.
+    Abstract base model with common fields and methods for all models.
+
+    Add ``created`` and ``modified`` timestamp fields. Update the ``modified``
+    field automatically on save. Sort by primary key.
     """
 
     created = models.DateTimeField(
