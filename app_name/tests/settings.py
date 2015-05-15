@@ -17,6 +17,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.staticfiles',
     'django_nose',
     '{{ app_name }}',
     '{{ app_name }}.tests'
