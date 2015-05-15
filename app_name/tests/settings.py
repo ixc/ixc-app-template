@@ -28,7 +28,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = '{{ app_name }}.urls'
+ROOT_URLCONF = '{{ app_name }}.tests.urls'
 SECRET_KEY = 'secret-key'
 STATIC_URL = '/static/'
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
