@@ -4,22 +4,25 @@ Please follow these guidelines when making contributions to this app.
 
 ## Getting Started
 
-Get the code and setup a virtualenv:
+Clone the repository and change directory:
 
     $ git clone git@github.com:ixc/<app_name>.git
     $ cd <app_name>
+
+Create a virtualenv and install dependencies:
+
+    $ pip install -U virtualenv
     $ virtualenv venv
     $ source venv/bin/activate
-    (venv)$ pip install -r requirements.txt
+    (venv)$ pip install -r requirements.txt -e .[dev,postgres]  # Omit unwanted optional extras.
 
 Run the tests:
 
-    # All environments, just the given environments, or just the virtualenv.
-    (venv)$ tox
-    (venv)$ tox -e django17-py27,django18-py27
-    (venv)$ ./manage.py test
+    (venv)$ tox  # All environments.
+    (venv)$ tox -e django17-py27,django18-py27  # Given environments.
+    (venv)$ ./manage.py test  # Virtualenv.
 
-Run the test project interactively:
+Run the `tests` project interactively:
 
     (venv)$ ./manage.py migrate
     (venv)$ ./manage.py runserver
