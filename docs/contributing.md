@@ -24,6 +24,12 @@ Run the test project interactively:
     (venv)$ ./manage.py migrate
     (venv)$ ./manage.py runserver
 
+## Django Versions & Migrations
+
+We support the current and previous release of Django, plus the current LTS
+release. Consequently, it is important that all migrations for this app are
+created with the lowest supported version of Django.
+
 ## Git
 
 We are using the [Gitflow branching model]. Basically:
