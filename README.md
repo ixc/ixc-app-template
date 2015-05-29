@@ -23,7 +23,7 @@ Install or upgrade Django:
 Create an app from the template:
 
     $ mkdir $APP
-    $ django-admin.py startapp -e md,yml -n .coveragerc \
+    $ django-admin.py startapp -e ini,md,yml -n .coveragerc \
     --template=https://github.com/ixc/ixc-app-template/archive/master.zip \
     $MODULE $APP
 
