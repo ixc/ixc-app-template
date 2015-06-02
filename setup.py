@@ -13,7 +13,6 @@ setuptools.setup(
         'django-webtest',
         'mkdocs',
         'nose-progressive',
-        'tox',
         'WebTest',
     ],
     extras_require={

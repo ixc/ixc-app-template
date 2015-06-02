@@ -9,24 +9,19 @@ Clone the repository and change directory:
     $ git clone git@github.com:ixc/<app_name>.git
     $ cd <app_name>
 
-Create a virtualenv and install dependencies:
+You don't need to install the project to run tests. You just need `tox`:
 
-    $ pip install -U virtualenv
-    $ virtualenv venv
-    $ source venv/bin/activate
-    (venv)$ pip install -r requirements.txt  # Absolute dependencies.
-    (venv)$ pip install -e .[dev,postgres]  # Abstract dependencies. Remove `dev` or `postgres` if unwanted.
+    $ pip install -U tox
+    $ tox  # All environments.
+    $ tox -e django{17,18}-py27  # Given environments.
 
-Run the tests:
+If the project dependencies have been updated, rebuild the test environment:
 
-    (venv)$ tox  # All environments.
-    (venv)$ tox -e django17-py27,django18-py27  # Given environments.
-    (venv)$ ./manage.py test  # Virtualenv.
+    $ tox -r
+    $ tox -e django17-py27 -r
 
-Run the `tests` project interactively:
-
-    (venv)$ ./manage.py migrate
-    (venv)$ ./manage.py runserver
+If you want to run and test the project interactively, follow the
+[installation] docs.
 
 ## Django Versions & Migrations
 
