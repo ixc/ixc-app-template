@@ -1,10 +1,8 @@
 import setuptools
 
-from {{ app_name }} import __version__
-
 setuptools.setup(
     name='{{ app_name }}',
-    version=__version__,
+    use_scm_version={'version_scheme': 'post-release'},
     packages=setuptools.find_packages(),
     install_requires=[
         'coverage',
@@ -19,4 +17,5 @@ setuptools.setup(
         'dev': ['ipdb', 'ipython'],
         'postgres': ['psycopg2'],
     },
+    setup_requires=['setuptools_scm'],
 )
