@@ -20,7 +20,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_nose',
     '{{ app_name }}',
-    '{{ app_name }}.tests'
+    '{{ app_name }}.tests',
 )
 
 MIDDLEWARE_CLASSES = (
